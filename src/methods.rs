@@ -1,3 +1,4 @@
+use std::fmt::{Debug, Formatter};
 use std::io;
 
 use serde::Deserialize;
@@ -11,8 +12,8 @@ mod chk {
 
 pub trait RpcMethod: chk::ValidRpcMarkerTrait
 where
-    Self::Response: RpcHandlerResponse,
-    Self::Error: RpcHandlerError,
+    Self::Response: RpcHandlerResponse + Debug,
+    Self::Error: RpcHandlerError + Debug,
 {
     type Response;
     type Error;
@@ -209,8 +210,8 @@ mod any {
 
     impl<T, E> RpcMethod for RpcAnyRequest<T, E>
     where
-        T: RpcHandlerResponse,
-        E: RpcHandlerError,
+        T: RpcHandlerResponse + Debug,
+        E: RpcHandlerError + Debug,
     {
         type Response = T;
         type Error = E;
