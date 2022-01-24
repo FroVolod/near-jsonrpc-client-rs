@@ -10,7 +10,7 @@ mod chk {
     pub trait ValidRpcMarkerTrait {}
 }
 
-pub trait RpcMethod: chk::ValidRpcMarkerTrait
+pub trait RpcMethod: chk::ValidRpcMarkerTrait + Debug
 where
     Self::Response: RpcHandlerResponse + Debug,
     Self::Error: RpcHandlerError + Debug,
