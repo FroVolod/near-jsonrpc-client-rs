@@ -20,9 +20,9 @@ borsh = "0.9"
 serde = "1.0.127"
 serde_json = "1.0.66"
 
-near-primitives = { git = "https://github.com/near/nearcore", branch = "daniyar/jsonrpc-primitives-debug" }
-near-chain-configs = { git = "https://github.com/near/nearcore", branch = "daniyar/jsonrpc-primitives-debug" }
-near-jsonrpc-primitives = { git = "https://github.com/near/nearcore", branch = "daniyar/jsonrpc-primitives-debug" }
+near-primitives = { git = "https://github.com/near/nearcore", branch = "master" }
+near-chain-configs = { git = "https://github.com/near/nearcore", branch = "master" }
+near-jsonrpc-primitives = { git = "https://github.com/near/nearcore", branch = "master" }
 
 [dev-dependencies]
 near-crypto = { git = "https://github.com/near/nearcore", branch = "daniyar/jsonrpc-primitives-debug" }
